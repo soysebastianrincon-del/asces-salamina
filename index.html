@@ -3,458 +3,164 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ASCES Cafés de Salamina</title>
-<meta name="description" content="ASCES reúne a las marcas de café de especialidad de Salamina, Caldas: conoce a cada productor, encuentra tu café y compra directo.">
-<meta property="og:title" content="ASCES · Cafés Especiales de Salamina">
-<meta property="og:description" content="ASCES reúne a las marcas de café de especialidad de Salamina, Caldas: conoce a cada productor, encuentra tu café y compra directo.">
-<meta property="og:image" content="logo-vertical.png">
+<title>ASCES · Cafés Especiales de Salamina, Caldas</title>
+<meta name="description" content="ASCES reúne a las marcas de café de especialidad de Salamina, Caldas. Conoce a cada productor, compra directo y vive Entre Filtros y Faroles en la Noche del Fuego.">
+<link rel="canonical" href="https://soysebastianrincon-del.github.io/asces-salamina/">
+<meta property="og:title" content="ASCES · Cafés Especiales de Salamina, Caldas">
+<meta property="og:description" content="ASCES reúne a las marcas de café de especialidad de Salamina, Caldas. Conoce a cada productor, compra directo y vive Entre Filtros y Faroles en la Noche del Fuego.">
+<meta property="og:image" content="https://soysebastianrincon-del.github.io/asces-salamina/logo-vertical.png">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
 <meta name="theme-color" content="#0E2F18">
 <link rel="icon" type="image/png" href="favicon.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@400;500;600;700&display=swap">
-<style>
-/* Identidad ASCES: una sola apariencia clara, fiel al logo (crema, verde montaña, dorado, vino) */
-:root{
-  --fog:#FBF8F2;       /* crema del logo */
-  --paper:#FFFDF8;
-  --ink:#0E2F18;       /* verde ASCES */
-  --muted:#52604F;
-  --line:#E3DCCB;
-  --cereza:#4A1712;    /* vino "Cafés especiales" */
-  --cereza-soft:#F1E3DA;
-  --balcon:#1F4A2A;    /* verde medio para acentos y bloques */
-  --balcon-soft:#E4ECDD;
-  --ocre:#BA7C2C;      /* dorado ASCES */
-  --ocre-text:#8E5B1A;
-  --ridge1:#EFE6D2;
-  --ridge2:#D9B878;
-  --ridge3:#5F7A45;
-  --ridge4:#0E2F18;
-  --display:"Marcellus","Trajan Pro",Georgia,serif;
-  --body:"Montserrat","Helvetica Neue",Arial,sans-serif;
-  --mono:"Montserrat","Helvetica Neue",Arial,sans-serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-body{background:var(--fog);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
-.wrap{max-width:1160px;margin:0 auto;padding-inline:20px}
-h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;text-wrap:balance;margin:0}
-h2{font-size:clamp(2rem,4.2vw,3.1rem)}
-h3{font-size:1.45rem}
-p{margin:0}
-a{color:inherit}
-.eyebrow{font-family:var(--mono);font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ocre-text)}
-.eyebrow::before{content:"";display:inline-block;width:22px;height:2px;background:var(--ocre);vertical-align:middle;margin-right:10px;border-radius:2px}
-.lead{font-size:1.12rem;color:var(--muted);max-width:60ch}
-.pending{font-family:var(--mono);font-weight:600;font-size:.68rem;background:#F6E7C8;color:#7A4B12;padding:2px 7px;border-radius:3px;letter-spacing:.04em;white-space:nowrap}
-button,.btn{font:600 .95rem/1 var(--body);cursor:pointer;border-radius:999px;padding:14px 22px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .2s,color .2s}
-.btn-primary{background:var(--ink);border-color:var(--ink);color:var(--fog)}
-.btn-primary:hover{background:var(--ocre);border-color:var(--ocre);color:#fff}
-.btn:hover:not(.btn-primary),button:hover:not(.btn-primary){background:var(--ink);color:var(--fog)}
-:focus-visible{outline:3px solid var(--balcon);outline-offset:3px}
-
-/* nav */
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--fog) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
-.logo{display:flex;align-items:baseline;gap:10px;text-decoration:none}
-.logo{align-items:center!important}
-.logo img{height:44px;width:auto}
-.logo b{font-family:var(--display);font-weight:400;font-size:1.6rem;letter-spacing:.06em;color:var(--ink)}
-.logo span{font-family:var(--mono);font-size:.68rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
-.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.92rem;font-weight:500}
-.nav ul a{text-decoration:none;color:var(--muted)}
-.nav ul a:hover{color:var(--ink)}
-@media (max-width:860px){.nav ul{display:none}}
-
-/* hero */
-.hero{position:relative;overflow:hidden;padding-block:72px 0}
-.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
-.hero-emblem{width:100%;max-width:440px;height:auto;justify-self:center;filter:drop-shadow(0 18px 30px rgba(14,47,24,.12))}
-.facts{grid-column:1/-1;grid-template-columns:repeat(4,1fr);column-gap:28px}
-@media (max-width:860px){.facts{grid-template-columns:1fr 1fr}.hero-emblem{max-width:300px;order:-1}}
-@media (max-width:520px){.facts{grid-template-columns:1fr}}
-.hero h1{font-size:clamp(2.8rem,7vw,5.6rem);letter-spacing:-.01em}
-.hero h1 em{font-style:normal;color:var(--ocre)}
-.hero .lead{margin-top:22px}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.facts{display:grid;gap:0;border-top:1px solid var(--line)}
-.fact{display:grid;gap:6px;padding:16px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.fact .k{font-family:var(--mono);font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ocre-text)}
-.fact .v{font-size:.98rem}
-.ridges{display:block;width:100%;height:auto;margin-top:56px}
-.ridges text{font-family:var(--mono);font-size:11px;fill:var(--muted);letter-spacing:.08em}
-@media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:36px}}
-
-/* sections */
-section.block{padding-block:96px}
-.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:48px}
-@media (max-width:860px){.sec-head{grid-template-columns:1fr;gap:16px}section.block{padding-block:72px}}
-.band{background:var(--paper);border-block:1px solid var(--line)}
-
-/* origen */
-.origen{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.origen article{display:grid;gap:12px;align-content:start;padding-top:20px;border-top:2px solid var(--ocre)}
-.origen .num{font-family:var(--display);font-size:3rem;line-height:1;color:var(--ocre)}
-.origen p{color:var(--muted);font-size:.98rem}
-@media (max-width:860px){.origen{grid-template-columns:1fr}}
-
-/* marcas */
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
-.chip{padding:9px 16px;font-size:.86rem;font-weight:500;border:1px solid var(--line);background:var(--paper)}
-.chip[aria-pressed="true"]{background:var(--ink);color:var(--fog);border-color:var(--ink)}
-.brands{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media (max-width:980px){.brands{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:620px){.brands{grid-template-columns:1fr}}
-.brand{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:22px;display:grid;gap:14px;grid-template-rows:auto auto 1fr auto}
-.brand-top{display:flex;justify-content:space-between;gap:10px;align-items:start}
-.brand h3{font-size:1.5rem}
-.brand .farm{color:var(--muted);font-size:.9rem;margin-top:4px}
-.score{font-family:var(--mono);text-align:right;flex-shrink:0}
-.score b{display:block;font-size:1.5rem;font-weight:500;color:var(--cereza);line-height:1}
-.score small{font-size:.66rem;color:var(--muted);letter-spacing:.08em}
-.specs{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;margin:0;font-size:.88rem}
-.specs dt{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.specs dd{margin:2px 0 0;font-variant-numeric:tabular-nums}
-.notes{display:flex;flex-wrap:wrap;gap:6px;align-self:start}
-.notes span{font-size:.78rem;padding:4px 10px;border-radius:999px;background:var(--cereza-soft);color:var(--cereza)}
-.brand-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:14px;border-top:1px solid var(--line)}
-.brand-foot a{font-weight:600;font-size:.9rem;color:var(--balcon)}
-.note-demo{margin-top:22px;font-size:.88rem;color:var(--muted)}
-
-/* buscador */
-.finder{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
-@media (max-width:900px){.finder{grid-template-columns:1fr}}
-.panel{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:26px;display:grid;gap:24px}
-fieldset{border:0;padding:0;margin:0;display:grid;gap:10px}
-legend{font-weight:600;margin-bottom:10px;font-size:.98rem}
-.opts{display:flex;flex-wrap:wrap;gap:8px}
-.opts label{cursor:pointer}
-.opts input{position:absolute;opacity:0;pointer-events:none}
-.opts span{display:inline-block;padding:9px 15px;border:1px solid var(--line);border-radius:999px;font-size:.88rem;background:var(--fog);transition:all .15s}
-.opts input:checked+span{background:var(--balcon);border-color:var(--balcon);color:var(--paper)}
-.opts input:focus-visible+span{outline:3px solid var(--balcon);outline-offset:2px}
-.results{display:grid;gap:12px}
-.match{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;cursor:pointer}
-.match input{width:18px;height:18px;accent-color:var(--ink)}
-.match strong{font-family:var(--display);font-weight:400;font-size:1.2rem;display:block}
-.match small{color:var(--muted);font-size:.85rem}
-.match .pct{font-family:var(--mono);font-weight:600;font-size:.85rem;color:var(--ocre-text)}
-.msg{background:var(--paper);border:1px dashed var(--ridge3);border-radius:6px;padding:18px;font-size:.92rem;white-space:pre-wrap;user-select:all}
-.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-
-/* ruta */
-.ruta{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
-.ruta li{list-style:none;padding:22px 20px 22px 0;border-bottom:1px solid var(--line);display:grid;gap:8px;align-content:start}
-.ruta .t{font-family:var(--mono);font-size:.72rem;font-weight:600;color:var(--ocre-text);letter-spacing:.14em}
-.ruta p{color:var(--muted);font-size:.93rem}
-@media (max-width:900px){.ruta{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.ruta{grid-template-columns:1fr}}
-
-/* compradores / unete */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-@media (max-width:860px){.split{grid-template-columns:1fr}}
-.card-dark{background:var(--ink);color:var(--fog);border-radius:6px;padding:34px;display:grid;gap:18px;align-content:start}
-.card-dark .eyebrow{color:#E0B46A}
-.card-dark .eyebrow::before{background:#E0B46A}
-.card-dark ul{margin:0;padding-left:18px;display:grid;gap:6px}
-form{display:grid;gap:14px}
-.field{display:grid;gap:6px}
-.field label{font-size:.85rem;font-weight:600}
-.field input,.field select,.field textarea{font:inherit;font-size:.95rem;padding:12px 14px;border:1px solid var(--line);border-radius:4px;background:var(--fog);color:var(--ink);width:100%}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media (max-width:520px){.two{grid-template-columns:1fr}}
-.ok{font-size:.92rem;color:var(--balcon);font-weight:600}
-
-footer{padding-block:56px 40px;background:#F2EBDC;color:var(--ink);border-top:3px solid var(--ocre)}
-footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
-footer .brandmark{width:min(340px,100%);height:auto}
-footer p,footer li{color:var(--muted);font-size:.9rem}
-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-footer h4{font-family:var(--mono);font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 12px;color:var(--ocre-text)}
-.legal{grid-column:1/-1;border-top:1px solid var(--line);padding-top:20px;font-size:.8rem!important}
-@media (max-width:760px){footer .wrap{grid-template-columns:1fr}}
-</style>
-<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Marcellus&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
 
-
-<nav class="nav" aria-label="Principal">
+<header class="nav">
   <div class="wrap">
-    <a class="logo" href="#inicio"><img src="logo-emblema.png" alt=""><b>ASCES</b><span>Cafés especiales · Salamina</span></a>
-    <ul>
-      <li><a href="#origen">Origen</a></li>
-      <li><a href="#marcas">Marcas</a></li>
-      <li><a href="#buscador">Encuentra tu café</a></li>
-      <li><a href="#visitanos">Visítanos</a></li>
-      <li><a href="#compradores">Compradores</a></li>
-    </ul>
-    <a class="btn btn-primary" href="#marcas" style="padding:11px 18px">Ver marcas</a>
+    <a class="brandlink" href="index.html" aria-label="ASCES, inicio"><img src="logo-emblema-sm.png" alt="" width="60" height="50"><span><b>ASCES</b><small>Cafés especiales de Salamina</small></span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+    <ul class="menu" id="menu"><li><a href="index.html" aria-current="page">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="marcas.html">Nuestras marcas</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="blog.html">Blog</a></li><li><a href="compradores.html">Compradores</a></li><li class="menu-cta"><a href="asociate.html">Quiero asociarme</a></li></ul>
   </div>
-</nav>
-
-<header class="hero" id="inicio">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow">Asociación de productores y comercializadores de cafés especiales de Salamina</p>
-      <h1 style="margin-top:18px">Un pueblo patrimonio.<br><em>Muchas marcas</em>, un solo origen.</h1>
-      <p class="lead">ASCES reúne a las familias y marcas que cultivan, procesan y tuestan café de especialidad en las montañas de Salamina, Caldas. Conoce a cada productor y encuentra el café que va contigo.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="#buscador">Encuentra tu café</a>
-        <a class="btn" href="#compradores">Soy comprador</a>
-      </div>
-    </div>
-    <img class="hero-emblem" src="logo-emblema.png" alt="Emblema de ASCES: caficultor recolectando café junto a la fuente de Salamina y las montañas">
-    <div class="facts" aria-label="Datos del origen">
-      <div class="fact"><span class="k">Municipio</span><span class="v">Salamina, norte de Caldas, fundado en 1825</span></div>
-      <div class="fact"><span class="k">Patrimonio</span><span class="v">Pueblo Patrimonio de Colombia y parte del Paisaje Cultural Cafetero (UNESCO, 2011)</span></div>
-      <div class="fact"><span class="k">Altitud</span><span class="v">Fincas entre <b>[altura mínima]</b> y <b>[altura máxima]</b> msnm <span class="pending">por confirmar</span></span></div>
-      <div class="fact"><span class="k">Marcas</span><span class="v"><b>[número]</b> marcas asociadas <span class="pending">por confirmar</span></span></div>
-    </div>
-  </div>
-  <svg class="ridges" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0 150 C160 110 260 140 380 100 S620 60 760 95 1040 70 1180 110 1360 90 1440 105 V260 H0Z" fill="var(--ridge1)"/>
-    <path d="M0 185 C140 160 250 175 360 140 S560 120 700 150 930 115 1080 150 1300 135 1440 160 V260 H0Z" fill="var(--ridge2)"/>
-    <path d="M0 215 C180 190 300 210 440 185 S700 170 860 200 1120 180 1260 205 1440 195 V260 H0Z" fill="var(--ridge3)"/>
-    <path d="M0 240 C200 228 360 238 520 226 S840 230 1000 238 1300 228 1440 236 V260 H0Z" fill="var(--ridge4)"/>
-    <line x1="700" y1="150" x2="700" y2="60" stroke="var(--muted)" stroke-dasharray="3 4"/>
-    <circle cx="700" cy="150" r="5" fill="var(--ocre)"/>
-    <text x="710" y="68" style="font-family:Montserrat,Arial,sans-serif;font-weight:600">SALAMINA · CALDAS</text>
-  </svg>
 </header>
-
-<section class="block band" id="origen">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><p class="eyebrow">El origen</p><h2 style="margin-top:12px">Por qué el café de Salamina sabe distinto</h2></div>
-      <p class="lead">Montaña alta, noches frías y familias que llevan generaciones en el cultivo. ASCES existe para que ese origen tenga nombre propio en el mercado y cada marca crezca con el respaldo de las demás.</p>
-    </div>
-    <div class="origen">
-      <article>
-        <span class="num">1825</span>
-        <h3>Un pueblo con historia</h3>
-        <p>Salamina conserva la arquitectura de la colonización antioqueña: balcones, portones tallados en madera y calles que hacen parte del Paisaje Cultural Cafetero.</p>
-      </article>
-      <article>
-        <span class="num">msnm</span>
-        <h3>Café de altura</h3>
-        <p>La altura y el clima frío hacen que el grano madure despacio, lo que suele dar tazas con más acidez, dulzor y complejidad. <span class="pending">agregar datos reales de las fincas</span></p>
-      </article>
-      <article>
-        <span class="num">80+</span>
-        <h3>Calidad de especialidad</h3>
-        <p>Un café se considera de especialidad cuando supera 80 puntos en la escala de catación SCA. Cada ficha de marca muestra su puntaje, proceso y notas de cata.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="block" id="marcas">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><p class="eyebrow">Directorio</p><h2 style="margin-top:12px">Las marcas de ASCES</h2></div>
-      <p class="lead">Cada marca tiene su finca, su proceso y su carácter. Filtra por proceso y escríbele directamente al productor.</p>
-    </div>
-    <div class="filters" role="group" aria-label="Filtrar por proceso">
-      <button class="chip" aria-pressed="true" data-f="todos">Todos</button>
-      <button class="chip" aria-pressed="false" data-f="Lavado">Lavado</button>
-      <button class="chip" aria-pressed="false" data-f="Honey">Honey</button>
-      <button class="chip" aria-pressed="false" data-f="Natural">Natural</button>
-    </div>
-    <div class="brands" id="brands"></div>
-    <p class="note-demo"><span class="pending">fichas de ejemplo</span> Los nombres, fincas y puntajes son de muestra. Se reemplazan con los datos reales de cada marca asociada. El orden de las marcas cambia en cada visita para que ninguna quede siempre de primera.</p>
-  </div>
-</section>
-
-<section class="block band" id="buscador">
-  <div class="wrap finder">
-    <div>
-      <p class="eyebrow">Encuentra tu café</p>
-      <h2 style="margin-top:12px">Cuéntanos cómo te gusta y te decimos qué marca probar</h2>
-      <p class="lead" style="margin-top:18px">Elige tus sabores y cómo preparas el café. Te mostramos las marcas que mejor encajan y te dejamos listo el mensaje para pedirlo por WhatsApp.</p>
-      <form class="panel" id="quiz" style="margin-top:28px">
-        <fieldset>
-          <legend>¿Qué sabores disfrutas?</legend>
-          <div class="opts">
-            <label><input type="checkbox" id="s-frutal" name="sabor" value="frutal" checked><span>Frutal</span></label>
-            <label><input type="checkbox" id="s-dulce" name="sabor" value="dulce"><span>Panela y caramelo</span></label>
-            <label><input type="checkbox" id="s-choco" name="sabor" value="chocolate" checked><span>Chocolate</span></label>
-            <label><input type="checkbox" id="s-floral" name="sabor" value="floral"><span>Floral</span></label>
-            <label><input type="checkbox" id="s-nuez" name="sabor" value="nuez"><span>Frutos secos</span></label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>¿Cómo lo preparas?</legend>
-          <div class="opts">
-            <label><input type="radio" id="m-filtro" name="metodo" value="filtro" checked><span>Filtro o V60</span></label>
-            <label><input type="radio" id="m-espresso" name="metodo" value="espresso"><span>Espresso</span></label>
-            <label><input type="radio" id="m-prensa" name="metodo" value="prensa"><span>Prensa francesa</span></label>
-            <label><input type="radio" id="m-greca" name="metodo" value="greca"><span>Greca o moka</span></label>
-          </div>
-        </fieldset>
-      </form>
-    </div>
-    <div style="display:grid;gap:18px">
-      <p class="eyebrow" style="color:var(--muted)">Tus coincidencias</p>
-      <div class="results" id="results"></div>
-      <p style="font-weight:600;margin-top:6px">Tu mensaje</p>
-      <div class="msg" id="msg"></div>
-      <div class="row">
-        <a class="btn btn-primary" id="wa" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
-        <button type="button" id="copy">Copiar mensaje</button>
-        <span class="ok" id="copied" hidden>Mensaje copiado</span>
+<main id="contenido">
+<section class="fire" aria-label="Evento Entre Filtros y Faroles">
+  <canvas class="embers" aria-hidden="true"></canvas>
+  <div class="wrap fire-grid">
+    <div class="stack" style="gap:22px">
+      <p class="sub">ASCES presenta · Primer concurso de cafés filtrados de Salamina</p>
+      <p class="kicker">En el marco de la Noche del Fuego</p>
+      <h2>Entre Filtros<span>y Faroles</span></h2>
+      <p class="lead">Una noche de fuego. Una taza de café. Una historia en Salamina. Baristas, productores y aficionados preparan café en V60 en pleno Parque de Bolívar, mientras el pueblo patrimonio se ilumina con sus faroles.</p>
+      <div class="facts-fire">
+        <div><small>Fecha</small><b>7 de diciembre de 2026</b></div>
+        <div><small>Hora</small><b>Desde las 8:00 a. m.</b></div>
+        <div><small>Lugar</small><b>Parque de Bolívar, Salamina</b></div>
       </div>
+      <div class="countdown" data-countdown aria-label="Tiempo que falta para el evento">
+      <div><b data-d>0</b><small>Días</small></div><div><b data-h>00</b><small>Horas</small></div>
+      <div><b data-m>00</b><small>Min</small></div><div><b data-s>00</b><small>Seg</small></div></div>
+      <div class="row"><a class="btn btn-fire" href="eventos.html#inscripcion">Inscríbete al concurso</a><a class="btn btn-ghost-light" href="eventos.html">Ver el evento</a></div>
+    </div>
+    <figure class="poster">
+      <img src="evento-entre-filtros-y-faroles.jpg" alt="Afiche oficial de Entre Filtros y Faroles, primer concurso de cafés filtrados de Salamina, 7 de diciembre de 2026 en el Parque de Bolívar" width="1024" height="1536">
+      <figcaption>#EntreFiltrosYFaroles</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap intro">
+    <img src="logo-emblema.png" alt="Emblema de ASCES: caficultor recolectando café junto a la fuente de Salamina" width="700" height="589">
+    <div class="stack" style="gap:20px">
+      <span class="eyebrow">Asociación de productores y comercializadores</span>
+      <h1>Siete marcas de café especial. Un solo origen: Salamina.</h1>
+      <p class="lead">ASCES reúne a las familias y marcas que cultivan, procesan y tuestan café de especialidad en Salamina, Caldas. Nos unimos para que el origen Salamina tenga nombre propio y cada marca crezca con el respaldo de las demás.</p>
+      <div class="stats">
+        <div><b>7</b><small>marcas asociadas</small></div>
+        <div><b>1.775–1.900</b><small>msnm, altitud de las fincas</small></div>
+        <div><b>1</b><small>pueblo patrimonio</small></div>
+      </div>
+      <div class="row" style="margin-top:8px"><a class="btn btn-primary" href="marcas.html">Conoce nuestras marcas</a><a class="btn" href="nosotros.html">Quiénes somos</a></div>
     </div>
   </div>
 </section>
 
-<section class="block" id="visitanos">
+<section class="section band">
   <div class="wrap">
-    <div class="sec-head">
-      <div><p class="eyebrow">Ruta del café</p><h2 style="margin-top:12px">Ven a tomarte el café donde nace</h2></div>
-      <p class="lead">Un día en Salamina: pueblo patrimonio, finca y taza. <span class="pending">confirmar horarios, fincas que reciben visitas y precios</span></p>
+    <div class="head">
+      <div class="stack"><span class="eyebrow">Nuestras marcas</span><h2>El café de Salamina tiene muchas caras</h2></div>
+      <p class="lead">Cada marca tiene su finca, su altura y su carácter. Conócelas y compra directo a quien cultiva tu café. El orden cambia en cada visita para que todas tengan el mismo lugar.</p>
     </div>
-    <ol class="ruta" style="padding:0;margin:0">
-      <li><span class="t">MAÑANA</span><h3>Recorrido por el pueblo</h3><p>Calles, balcones y portones tallados del centro histórico.</p></li>
-      <li><span class="t">MEDIODÍA</span><h3>Visita a finca</h3><p>Cultivo, recolección y beneficio contados por la familia productora.</p></li>
-      <li><span class="t">TARDE</span><h3>Cata guiada</h3><p>Prueba varias marcas de la asociación y aprende a reconocer sus notas.</p></li>
-      <li><span class="t">AL SALIR</span><h3>Llévate tu café</h3><p>Compra directo a las marcas que más te gustaron.</p></li>
-    </ol>
+    <div class="brands" data-shuffle><a class="bcard" href="marcas.html#abby">
+      <div class="ph"><img src="marca-abby.jpg" alt="Café Abby Coffee Kepein" loading="lazy" style="object-position:center 40%"></div>
+      <div class="body"><span class="meta">Salamina · 1.822 msnm</span><h3>Abby Coffee Kepein</h3><p>El detalle perfecto para decir “Pensé en ti”</p><span class="more">Conocer la marca →</span></div>
+    </a><a class="bcard" href="marcas.html#ambrosia">
+      <div class="ph"><img src="marca-ambrosia.jpg" alt="Café Ambrosía Café" loading="lazy" style="object-position:50% center"></div>
+      <div class="body"><span class="meta">Finca El Paraíso · 1.686 msnm</span><h3>Ambrosía Café</h3><p>Café colombiano de proceso natural</p><span class="more">Conocer la marca →</span></div>
+    </a><a class="bcard" href="marcas.html#cumbre">
+      <div class="ph"><img src="marca-cumbre.jpg" alt="Café Cumbre Café Gourmet" loading="lazy" style="object-position:center 60%"></div>
+      <div class="body"><span class="meta">Finca del Reposo · 1.822 msnm</span><h3>Cumbre Café Gourmet</h3><p>Un viaje a la cima del sabor en cada taza</p><span class="more">Conocer la marca →</span></div>
+    </a><a class="bcard" href="marcas.html#diaz-cano">
+      <div class="ph"><img src="marca-diaz-cano.jpg" alt="Café Díaz Cano" loading="lazy" style="object-position:center 55%"></div>
+      <div class="body"><span class="meta">Finca Aurora · 1.650 msnm</span><h3>Díaz Cano</h3><p>Un café con apellido propio</p><span class="more">Conocer la marca →</span></div>
+    </a><a class="bcard" href="marcas.html#juglans">
+      <div class="ph"><img src="marca-juglans.jpg" alt="Café Café Juglans Neotropica" loading="lazy" style="object-position:34% center"></div>
+      <div class="body"><span class="meta">Salamina · 1.900 msnm</span><h3>Café Juglans Neotropica</h3><p>Café de altura con nombre de árbol nativo</p><span class="more">Conocer la marca →</span></div>
+    </a><a class="bcard" href="marcas.html#los-molinos">
+      <div class="ph"><img src="marca-los-molinos.jpg" alt="Café Los Molinos" loading="lazy" style="object-position:30% center"></div>
+      <div class="body"><span class="meta">Origen salamineño · desde 2017</span><h3>Los Molinos</h3><p>¡Dejando huellas! Excelencia y tradición</p><span class="more">Conocer la marca →</span></div>
+    </a><a class="bcard" href="marcas.html#valencia">
+      <div class="ph"><img src="marca-valencia.jpg" alt="Café Valencia" loading="lazy" style="object-position:center 55%"></div>
+      <div class="body"><span class="meta">Café de diario · Caldas</span><h3>Valencia</h3><p>Tiempo de calidad con café de especialidad</p><span class="more">Conocer la marca →</span></div>
+    </a><a class="bcard-join" href="asociate.html" data-fixed><h3>¿Tu marca es de Salamina?</h3><p>Súmate a ASCES y aparece aquí junto a las demás marcas de especialidad.</p><span>Quiero asociarme →</span></a></div>
   </div>
 </section>
 
-<section class="block band" id="compradores">
-  <div class="wrap split">
-    <div class="card-dark">
-      <p class="eyebrow">Para tostadores, cafeterías y exportadores</p>
-      <h2>Compra café de Salamina con un solo contacto</h2>
-      <p>La asociación te conecta con varias fincas a la vez: más volumen, trazabilidad por lote y muestras para catar antes de comprar.</p>
-      <ul>
-        <li>Café verde y tostado</li>
-        <li>Lotes por finca, variedad y proceso</li>
-        <li>Muestras para catación</li>
-      </ul>
+<section class="section">
+  <div class="wrap">
+    <div class="head">
+      <div class="stack"><span class="eyebrow">El origen</span><h2>Por qué el café de Salamina sabe distinto</h2></div>
+      <p class="lead">Montaña alta, noches frías y familias que llevan generaciones en el cultivo, en uno de los pueblos más bellos del Eje Cafetero.</p>
     </div>
-    <div class="panel">
-      <h3>Pide muestras o una cotización</h3>
-      <form id="b2b">
-        <div class="two">
-          <div class="field"><label for="b-nombre">Nombre</label><input id="b-nombre" required value="Laura Gómez"></div>
-          <div class="field"><label for="b-empresa">Empresa</label><input id="b-empresa" value="Tostadora ejemplo"></div>
-        </div>
-        <div class="two">
-          <div class="field"><label for="b-tipo">Tipo de negocio</label>
-            <select id="b-tipo"><option>Tostadora</option><option>Cafetería</option><option>Exportador</option><option>Tienda</option><option>Otro</option></select></div>
-          <div class="field"><label for="b-vol">Volumen mensual</label>
-            <select id="b-vol"><option>Menos de 50 kg</option><option selected>50 a 250 kg</option><option>250 a 1.000 kg</option><option>Más de 1.000 kg</option></select></div>
-        </div>
-        <div class="field"><label for="b-msg">¿Qué buscas?</label><textarea id="b-msg" rows="3">Busco un lavado de altura con notas a chocolate para espresso de la casa.</textarea></div>
-        <button class="btn-primary" type="submit">Preparar solicitud</button>
-        <p class="ok" id="b2b-ok" hidden>Solicitud lista. Mientras conectamos el formulario, envíala al correo de la asociación: <b>[correo por confirmar]</b></p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<section class="block" id="unete">
-  <div class="wrap sec-head" style="margin-bottom:0">
-    <div><p class="eyebrow">Para productores</p><h2 style="margin-top:12px">¿Tienes una marca de café especial en Salamina?</h2></div>
-    <div style="display:grid;gap:20px">
-      <p class="lead">Únete a ASCES para aparecer en el directorio, participar en catas y ferias y vender con el respaldo del origen Salamina. <span class="pending">agregar requisitos de ingreso</span></p>
-      <div><a class="btn" href="#compradores">Quiero afiliarme</a></div>
+    <div class="cols3">
+      <article class="pillar"><span class="num">1825</span><h3>Un pueblo con historia</h3><p>Salamina conserva la arquitectura de la colonización antioqueña: balcones, portones tallados y calles que hacen parte del Paisaje Cultural Cafetero, declarado patrimonio por la UNESCO en 2011.</p></article>
+      <article class="pillar"><span class="num">1.900</span><h3>Café de altura</h3><p>Nuestras fincas están entre 1.775 y 1.900 metros sobre el nivel del mar. A esa altura el grano madura despacio y gana dulzor, acidez y complejidad.</p></article>
+      <article class="pillar"><span class="num">84</span><h3>Calidad que se mide</h3><p>Un café es de especialidad cuando supera los 80 puntos en catación. Nuestras marcas trabajan cada lote para llevar ese nivel a tu taza.</p></article>
     </div>
   </div>
 </section>
 
+<section class="section paper">
+  <div class="wrap">
+    <div class="head">
+      <div class="stack"><span class="eyebrow">Blog</span><h2>Historias, recetas y noticias del café de Salamina</h2></div>
+      <div><a class="btn" href="blog.html">Ver todo el blog</a></div>
+    </div>
+    <div class="posts"><a class="post" href="blog-entre-filtros-y-faroles.html"><div class="ph"><img src="blog-entre-filtros.jpg" alt="" loading="lazy"></div>
+      <div class="body"><span class="meta">Eventos · 4 de octubre de 2026</span><h3>Entre Filtros y Faroles: así será el primer concurso de cafés filtrados de Salamina</h3><p>El 7 de diciembre, en plena Noche del Fuego, el Parque de Bolívar se llena de V60, microlotes y aficionados. Te contamos cómo participar.</p></div></a><a class="post" href="blog-procesos-del-cafe.html"><div class="ph"><img src="marca-ambrosia.jpg" alt="" loading="lazy"></div>
+      <div class="body"><span class="meta">Aprende de café · 4 de octubre de 2026</span><h3>Lavado, honey o natural: qué cambia en tu taza según el proceso</h3><p>El mismo grano puede saber muy distinto según cómo se procese después de la cosecha. Una guía corta para elegir mejor tu café de Salamina.</p></div></a><a class="post" href="blog-receta-v60.html"><div class="ph"><img src="blog-v60.jpg" alt="" loading="lazy"></div>
+      <div class="body"><span class="meta">Preparación · 4 de octubre de 2026</span><h3>Cómo preparar café en V60 en casa, paso a paso</h3><p>El V60 es el método oficial de Entre Filtros y Faroles. Con esta receta sencilla puedes practicar en casa con cualquier marca de la asociación.</p></div></a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap duo">
+    <div class="cta cta-dark">
+      <span class="eyebrow">Para productores</span>
+      <h2>¿Tienes una marca de café especial en Salamina?</h2>
+      <p>Asóciate a ASCES para aparecer en esta web, participar en catas, ferias y eventos, y vender con el respaldo del origen Salamina.</p>
+      <div class="row"><a class="btn btn-gold" href="asociate.html">Quiero asociarme</a></div>
+    </div>
+    <div class="cta cta-light">
+      <span class="eyebrow">Para compradores</span>
+      <h2>Tiendas, cafeterías y tostadores</h2>
+      <p class="lead" style="font-size:1rem">Compra café de varias fincas de Salamina con un solo contacto. Pide muestras para catar antes de comprar.</p>
+      <div class="row"><a class="btn btn-primary" href="compradores.html">Pedir muestras</a></div>
+    </div>
+  </div>
+</section>
+</main>
 <footer>
-  <div class="wrap">
-    <div style="display:grid;gap:14px">
-      <img class="brandmark" src="logo-horizontal.png" alt="ASCES, Asociación de Productores y Comercializadores de Cafés Especiales de Salamina">
-      <p>Asociación de Productores y Comercializadores de Cafés Especiales de Salamina, Caldas, Colombia.</p>
+  <div class="wrap foot">
+    <div class="stack" style="gap:16px">
+      <img src="logo-horizontal.png" alt="ASCES, Asociación de Productores y Comercializadores de Cafés Especiales de Salamina" width="900" height="310" loading="lazy">
+      <p>Impulsamos las marcas de café de especialidad de Salamina, Caldas, pueblo patrimonio del Paisaje Cultural Cafetero.</p>
     </div>
-    <div><h4>Contacto</h4><ul><li>WhatsApp: [por confirmar]</li><li>Correo: [por confirmar]</li><li>Dirección: [por confirmar]</li></ul></div>
-    <div><h4>Síguenos</h4><ul><li><a href="https://www.instagram.com/ascescafesespeciales/" target="_blank" rel="noopener">Instagram @ascescafesespeciales</a></li></ul></div>
-    <p class="legal">© 2026 ASCES · Salamina, Caldas</p>
+    <div><h4>Navega</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="marcas.html">Nuestras marcas</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="blog.html">Blog</a></li><li><a href="compradores.html">Compradores</a></li><li><a href="asociate.html">Asóciate</a></li></ul></div>
+    <div><h4>Nuestras marcas</h4><ul><li><a href="marcas.html#abby">Abby Coffee Kepein</a></li><li><a href="marcas.html#ambrosia">Ambrosía Café</a></li><li><a href="marcas.html#cumbre">Cumbre Café Gourmet</a></li><li><a href="marcas.html#diaz-cano">Díaz Cano</a></li><li><a href="marcas.html#juglans">Café Juglans Neotropica</a></li><li><a href="marcas.html#los-molinos">Los Molinos</a></li><li><a href="marcas.html#valencia">Valencia</a></li></ul></div>
+    <div><h4>Contacto</h4><ul>
+      <li>Salamina, Caldas, Colombia</li>
+      <li>WhatsApp: <span class="pending">por confirmar</span></li>
+      <li>Correo: <span class="pending">por confirmar</span></li>
+      <li><a href="https://www.instagram.com/ascescafesespeciales/" target="_blank" rel="noopener">Instagram @ascescafesespeciales</a></li>
+    </ul></div>
+    <div class="legal"><span>© <span data-year>2026</span> ASCES · Asociación de Productores y Comercializadores de Cafés Especiales de Salamina</span><span>Hecho en Salamina, Caldas</span></div>
   </div>
 </footer>
-
-<script>
-const BRANDS=[
-  {n:"Café La Palma",f:"Finca La Palma · Vereda [por confirmar]",sca:86,alt:"1.850 msnm",var:"Caturra",proc:"Lavado",notes:["Chocolate","Panela","Naranja"],t:["chocolate","dulce","frutal"],m:["espresso","greca","filtro"]},
-  {n:"Alto de los Arrieros",f:"Finca El Mirador",sca:87.5,alt:"1.950 msnm",var:"Castillo",proc:"Honey",notes:["Caramelo","Durazno","Miel"],t:["dulce","frutal"],m:["filtro","prensa"]},
-  {n:"Balcones Café",f:"Finca Los Balcones",sca:85,alt:"1.700 msnm",var:"Colombia",proc:"Lavado",notes:["Cacao","Nuez","Caña"],t:["chocolate","nuez","dulce"],m:["espresso","greca","prensa"]},
-  {n:"Niebla Roja",f:"Finca La Cereza",sca:88,alt:"2.000 msnm",var:"Geisha",proc:"Natural",notes:["Jazmín","Frutos rojos","Vino"],t:["floral","frutal"],m:["filtro"]},
-  {n:"Tierra de Portones",f:"Finca San Félix",sca:85.5,alt:"1.800 msnm",var:"Castillo",proc:"Lavado",notes:["Chocolate","Avellana"],t:["chocolate","nuez"],m:["espresso","greca","prensa"]},
-  {n:"Café Ciudad Luz",f:"Finca La Esperanza",sca:86.5,alt:"1.900 msnm",var:"Borbón rosado",proc:"Natural",notes:["Fresa","Flores","Panela"],t:["frutal","floral","dulce"],m:["filtro","prensa"]}
-];
-// orden aleatorio para que ninguna marca quede siempre primero
-const order=BRANDS.map((b,i)=>i).sort(()=>Math.random()-.5);
-const brandsEl=document.getElementById('brands');
-function renderBrands(filter){
-  brandsEl.innerHTML=order.map(i=>BRANDS[i]).filter(b=>filter==='todos'||b.proc===filter).map(b=>`
-    <article class="brand">
-      <div class="brand-top">
-        <div><h3>${b.n}</h3><p class="farm">${b.f}</p></div>
-        <div class="score"><b>${b.sca}</b><small>PUNTOS SCA</small></div>
-      </div>
-      <dl class="specs">
-        <div><dt>Altitud</dt><dd>${b.alt}</dd></div>
-        <div><dt>Variedad</dt><dd>${b.var}</dd></div>
-        <div><dt>Proceso</dt><dd>${b.proc}</dd></div>
-        <div><dt>Ficha</dt><dd><span class="pending">ejemplo</span></dd></div>
-      </dl>
-      <div class="notes">${b.notes.map(x=>`<span>${x}</span>`).join('')}</div>
-      <div class="brand-foot"><span style="font-size:.85rem;color:var(--muted)">Salamina, Caldas</span><a href="#buscador">Pedir este café →</a></div>
-    </article>`).join('');
-}
-renderBrands('todos');
-document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
-  document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed','false'));
-  c.setAttribute('aria-pressed','true');renderBrands(c.dataset.f);
-}));
-
-// buscador
-const quiz=document.getElementById('quiz'),res=document.getElementById('results'),msg=document.getElementById('msg'),wa=document.getElementById('wa');
-const metodoTxt={filtro:'filtro/V60',espresso:'espresso',prensa:'prensa francesa',greca:'greca'};
-let picked=new Set();
-function compute(){
-  const sab=[...quiz.querySelectorAll('input[name=sabor]:checked')].map(i=>i.value);
-  const met=quiz.querySelector('input[name=metodo]:checked').value;
-  const scored=BRANDS.map(b=>{
-    const hit=sab.filter(s=>b.t.includes(s)).length;
-    const base=sab.length?hit/sab.length:0.5;
-    const pct=Math.round((base*0.75+(b.m.includes(met)?0.25:0))*100);
-    return {b,pct};
-  }).sort((a,z)=>z.pct-a.pct).slice(0,3);
-  if(!picked.size||![...picked].some(n=>scored.find(s=>s.b.n===n))){picked=new Set([scored[0].b.n]);}
-  res.innerHTML=scored.map(({b,pct})=>`
-    <label class="match"><input type="checkbox" data-n="${b.n}" ${picked.has(b.n)?'checked':''}>
-      <span><strong>${b.n}</strong><small>${b.proc} · ${b.notes.join(', ')}</small></span>
-      <span class="pct">${pct}%</span></label>`).join('');
-  res.querySelectorAll('input').forEach(i=>i.addEventListener('change',()=>{i.checked?picked.add(i.dataset.n):picked.delete(i.dataset.n);writeMsg(met);}));
-  writeMsg(met);
-}
-function writeMsg(met){
-  const list=[...picked];
-  const text=list.length
-    ?`Hola, vi la página de ASCES. Me interesa comprar: ${list.join(', ')}. Lo preparo en ${metodoTxt[met]}, ¿me recomiendan la molienda y me cuentan precios y envío?`
-    :'Selecciona al menos una marca para armar tu mensaje.';
-  msg.textContent=text;
-  wa.href='https://wa.me/?text='+encodeURIComponent(text);
-}
-quiz.addEventListener('change',compute);
-compute();
-document.getElementById('copy').addEventListener('click',async()=>{
-  const ok=document.getElementById('copied');
-  try{await navigator.clipboard.writeText(msg.textContent);ok.hidden=false;setTimeout(()=>ok.hidden=true,2200);}
-  catch(e){const r=document.createRange();r.selectNodeContents(msg);const s=getSelection();s.removeAllRanges();s.addRange(r);}
-});
-document.getElementById('b2b').addEventListener('submit',e=>{e.preventDefault();document.getElementById('b2b-ok').hidden=false;});
-</script>
-
+<script src="main.js"></script>
 </body>
 </html>
